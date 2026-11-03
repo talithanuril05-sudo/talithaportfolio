@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talitha Nuril Azmi | Portofolio Matematika & Analisis Data</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mahogany: {
+                            500: '#8C3830',
+                            600: '#6E2A24',
+                            700: '#4A1E1B',
+                            800: '#341412',
+                            900: '#210C0B',
+                        },
+                        ivory: {
+                            50: '#FDFCF9',
+                            100: '#FBF9F5',
+                            200: '#F3EEE3',
+                            300: '#E6DCB8',
+                        },
+                        cream: '#F7F3E9',
+                        goldAccent: '#C59B27',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        display: ['Outfit', 'Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .slide-card {
+            background: #FDFCF9;
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px -5px rgba(74, 30, 27, 0.06);
+            border: 1px solid #E6DCB8;
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#6E2A24 2px, transparent 2px);
+            background-size: 16px 16px;
+            opacity: 0.2;
+        }
+        .dot-pattern-light {
+            background-image: radial-gradient(#FBF9F5 2px, transparent 2px);
+            background-size: 16px 16px;
+            opacity: 0.25;
+        }
+        .hero-curved-banner {
+            background: linear-gradient(135deg, #6E2A24 0%, #341412 100%);
+            border-radius: 2.5rem;
+        }
+    </style>
+</head>
+<body class="bg-ivory-200 text-slate-800 font-sans antialiased selection:bg-mahogany-600 selection:text-white pb-16">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-ivory-50/90 backdrop-blur-md border-b border-ivory-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-mahogany-600 text-white flex items-center justify-center font-display font-extrabold text-xl group-hover:bg-mahogany-800 transition duration-300 shadow-md">
+                        T
+                    </div>
+                    <span class="font-display font-extrabold text-xl tracking-tight text-mahogany-900">Talitha<span class="text-mahogany-600">.Azmi</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-700">
+                    <a href="#home" class="hover:text-mahogany-600 transition">Beranda</a>
+                    <a href="#about" class="hover:text-mahogany-600 transition">About</a>
+                    <a href="#education" class="hover:text-mahogany-600 transition">Education</a>
+                    <a href="#experience" class="hover:text-mahogany-600 transition">Experience</a>
+                    <a href="#skills" class="hover:text-mahogany-600 transition">Skills & Certificates</a>
+                    <a href="#projects" class="hover:text-mahogany-600 transition">Projects</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-mahogany-600 text-white rounded-xl hover:bg-mahogany-800 transition duration-300 shadow-md font-bold">Contact Me</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 text-slate-700 hover:text-mahogany-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-ivory-50 border-b border-ivory-300 px-4 pt-2 pb-4 space-y-2 font-semibold">
+            <a href="#home" class="block py-2 text-slate-700 hover:text-mahogany-600">Beranda</a>
+            <a href="#about" class="block py-2 text-slate-700 hover:text-mahogany-600">About</a>
+            <a href="#education" class="block py-2 text-slate-700 hover:text-mahogany-600">Education</a>
+            <a href="#experience" class="block py-2 text-slate-700 hover:text-mahogany-600">Experience</a>
+            <a href="#skills" class="block py-2 text-slate-700 hover:text-mahogany-600">Skills & Certificates</a>
+            <a href="#projects" class="block py-2 text-slate-700 hover:text-mahogany-600">Projects</a>
+            <a href="#contact" class="block py-2 text-mahogany-600 font-bold">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: SLIDE HEADER PORTFOLIO -->
+    <section id="home" class="pt-24 md:pt-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="hero-curved-banner relative p-8 md:p-14 text-white overflow-hidden shadow-2xl">
+            <!-- Dot matrix accent -->
+            <div class="dot-pattern-light absolute top-6 left-8 w-24 h-24 pointer-events-none"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-mono font-semibold tracking-wider text-ivory-200 uppercase">
+                        Mathematics & Data Professional • 2026
+                    </div>
+                    <h1 class="text-5xl sm:text-7xl font-display font-black tracking-tight leading-none uppercase">
+                        port<br><span class="text-ivory-300">folio</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-ivory-100 font-medium max-w-xl leading-relaxed">
+                        Talitha Nuril Azmi — Bachelor of Science in Mathematics Sumatera Institute of Technology | Orientation in Mechine Learning | Mathematical Modeling | Data entry | Management System.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-3">
+                        <a href="#contact" class="px-6 py-3 bg-ivory-50 text-mahogany-800 font-display font-bold rounded-xl hover:bg-ivory-200 transition shadow-lg">
+                            Hubungi Saya
+                        </a>
+                        <button onclick="downloadCV()" class="px-6 py-3 bg-mahogany-700/60 border border-white/20 text-white font-display font-bold rounded-xl hover:bg-mahogany-700 transition">
+                            <i class="fa-solid fa-download mr-2"></i>Unduh CV
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Curved White Frame around Profile -->
+                        <div class="bg-ivory-50 p-3 rounded-3xl shadow-xl transform rotate-1 hover:rotate-0 transition duration-300 border border-ivory-300">
+                            <div class="w-full h-80 rounded-2xl overflow-hidden bg-ivory-200 relative">
+                                <img src="assets/hero-bg.jpeg" 
+                                     alt="Talitha Nuril Azmi" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-3 text-center">
+                                <h3 class="font-display font-bold text-mahogany-900 text-lg">Talitha Nuril Azmi</h3>
+                                <p class="text-xs text-mahogany-600 font-semibold">S1 Matematika • ITERA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT ME (DISAJIKAN UTUH SEPERTI SEBELUMNYA) -->
+    <section id="about" class="pt-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="slide-card p-8 md:p-12 relative overflow-hidden">
+            <div class="dot-pattern absolute top-8 right-8 w-28 h-28 pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs font-mono font-bold text-mahogany-600 tracking-widest uppercase">Personal Profile</span>
+                    <h2 class="text-4xl sm:text-6xl font-display font-black text-mahogany-900 tracking-tight leading-none uppercase">
+                        About <br><span class="text-mahogany-600">Me</span>
+                    </h2>
+                    <div class="p-4 bg-ivory-100 rounded-2xl border-l-4 border-mahogany-600">
+                        <p class="text-xs sm:text-sm text-slate-700 italic font-medium">
+                            ""
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed font-normal">
+                    <p>
+                        Saya adalah Lulusan Sarjana (S1) Matematika dari Institut Teknologi Sumatera (ITERA) dengan minat mendalam untuk mengembangkan karier profesional di dunia industri. Memiliki latar belakang matematika murni yang kokoh serta penguasaan pada statistika terapan, sistem manajemen, dan analisis data.
+            
+                        Selama studi dan pengalaman magang di PT Wijaya Karya Beton Tbk, saya terbiasa melakukan rekapitulasi data produksi, pengujian Time Motion, dan kalkulasi laboratorium dengan tingkat ketelitian tinggi. Didukung oleh kemampuan beradaptasi yang cepat, kepemimpinan organisasi, serta komunikasi yang efektif.
+                    </p>
+                    
+                    <!-- 4 Pilar Keahlian Utama -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="p-3 bg-ivory-100 rounded-xl border border-ivory-300 text-center">
+                            <i class="fa-solid fa-chart-line text-mahogany-600 text-lg mb-1"></i>
+                            <h4 class="font-bold text-xs text-mahogany-900">Analisis Data</h4>
+                        </div>
+                        <div class="p-3 bg-ivory-100 rounded-xl border border-ivory-300 text-center">
+                            <i class="fa-solid fa-calculator text-mahogany-600 text-lg mb-1"></i>
+                            <h4 class="font-bold text-xs text-mahogany-900">Pemodelan Math</h4>
+                        </div>
+                        <div class="p-3 bg-ivory-100 rounded-xl border border-ivory-300 text-center">
+                            <i class="fa-solid fa-gears text-mahogany-600 text-lg mb-1"></i>
+                            <h4 class="font-bold text-xs text-mahogany-900">Sistem Manajerial</h4>
+                        </div>
+                        <div class="p-3 bg-ivory-100 rounded-xl border border-ivory-300 text-center">
+                            <i class="fa-solid fa-users text-mahogany-600 text-lg mb-1"></i>
+                            <h4 class="font-bold text-xs text-mahogany-900">Kolaborasi Tim</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: EDUCATION -->
+    <section id="education" class="pt-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="slide-card p-8 md:p-12 relative overflow-hidden">
+            <div class="dot-pattern absolute top-8 right-8 w-28 h-28 pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-6 space-y-4">
+                    <span class="text-xs font-mono font-bold text-mahogany-600 tracking-widest uppercase">Academic Background</span>
+                    <h2 class="text-5xl sm:text-7xl font-display font-black text-mahogany-600 leading-none uppercase tracking-tight">
+                        Edu-<br><span class="text-mahogany-900">cation</span>
+                    </h2>
+                    <p class="text-sm text-slate-600 max-w-md">
+                        Rekam jejak akademis formal dengan fokus pemodelan matematika, komputasi, dan program akselerasi.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <!-- ITERA -->
+                    <div class="p-6 bg-ivory-100 rounded-2xl border-l-4 border-mahogany-600 shadow-sm relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-display font-bold text-mahogany-900 text-xl">Institut Teknologi Sumatera (ITERA)</h3>
+                            <span class="text-xs font-mono font-bold bg-mahogany-600 text-white px-3 py-1 rounded-full">2022 - 2026</span>
+                        </div>
+                        <h4 class="font-semibold text-mahogany-600 text-sm">Program Studi Sarjana (S1) Matematika</h4>
+                        <p class="text-xs text-slate-600 mt-2">Berfokus pada statistika terapan, pemodelan stokastik, matematika keuangan, dan teknik komputasi optimization.</p>
+                    </div>
+
+                    <!-- SMA -->
+                    <div class="p-6 bg-ivory-100 rounded-2xl border-l-4 border-slate-400 shadow-sm relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-display font-bold text-mahogany-900 text-xl">SMAN 2 Kalianda</h3>
+                            <span class="text-xs font-mono font-bold bg-slate-700 text-white px-3 py-1 rounded-full">2020 - 2022</span>
+                        </div>
+                        <h4 class="font-semibold text-slate-600 text-sm">Jurusan MIPA (Acceleration Program)</h4>
+                        <p class="text-xs text-slate-600 mt-2">Menyelesaikan pendidikan SMA lebih cepat melalui program kelas akselerasi berpencapaian tinggi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-8 bg-mahogany-600 rounded-b-2xl mt-8 -mb-12 -mx-12"></div>
+    <!-- SECTION 4: WORK EXPERIENCE (WITH BACKGROUND TEMPLATE FOTO) -->
+    <section id="experience" class="pt-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- Menggunakan background gambar template custom dari assets -->
+        <div class="relative rounded-3xl p-8 md:p-12 text-white overflow-hidden shadow-2xl bg-cover bg-center" style="background-image: url('assets/fotokkn.jpeg');">
+            <!-- Overlay Transparan agar Teks Tetap Sangat Jelas Dibaca -->
+            <div class="absolute inset-0 bg-gradient-to-r from-mahogany-900/90 via-mahogany-800/85 to-mahogany-900/90 backdrop-blur-[1px]"></div>
+            <div class="dot-pattern-light absolute bottom-4 left-4 w-32 h-32 pointer-events-none z-10"></div>
+
+            <div class="mb-10 text-center lg:text-left relative z-10">
+                <span class="text-xs font-mono font-bold text-ivory-300 tracking-widest uppercase">Career & Internship</span>
+                <h2 class="text-4xl sm:text-6xl font-display font-black tracking-tight uppercase mt-1">
+                    Work <span class="text-ivory-300">Experience</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                
+                <!-- Exp 1: WIKA Beton -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-ivory-200 bg-white/20 px-2.5 py-1 rounded-md">Jul 2025 - Aug 2025</span>
+                        <h3 class="font-display font-bold text-xl text-white mt-3">PT WIKA Beton Tbk</h3>
+                        <p class="text-xs text-ivory-200 font-semibold mb-3">Mahasiswa Magang • Seksi Produksi</p>
+                        <ul class="text-xs text-ivory-100 space-y-2 list-disc list-inside mb-4">
+                            <li>Administrasi & rekap laporan harian produksi beton.</li>
+                            <li>Pembuatan dan pengujian Time Motion produk baru.</li>
+                            <li>Perhitungan takaran produk di laboratorium.</li>
+                        </ul>
+                    </div>
+                    <!-- Foto Magang Links menggunakan Button -->
+                    <div class="pt-3 border-t border-white/20">
+                        <span class="text-[11px] font-mono text-ivory-300 block mb-2"><i class="fa-solid fa-images mr-1"></i> Dokumentasi Foto (3 Foto):</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="openMediaModal('Magang WIKA - Laporan Produksi', 'assets/dokumentasi_wika_1.jpeg', 'Foto dokumentasi rekapitulasi laporan harian produksi beton.')" class="px-3 py-1.5 bg-white/20 text-xs font-bold rounded-lg hover:bg-white/30 text-white transition flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-image"></i> Foto 1
+                            </button>
+                            <button onclick="openMediaModal('Magang WIKA - Time Motion Test', 'assets/dokumentasi_wika_2.jpeg', 'Foto dokumentasi pengujian Time Motion produk baru di lapangan.')" class="px-3 py-1.5 bg-white/20 text-xs font-bold rounded-lg hover:bg-white/30 text-white transition flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-image"></i> Foto 2
+                            </button>
+                            <button onclick="openMediaModal('Magang WIKA - Laboratorium', 'assets/dokumentasi_wika_3.jpeg', 'Foto laboratorium dan kalkulasi takaran racikan bahan beton.')" class="px-3 py-1.5 bg-white/20 text-xs font-bold rounded-lg hover:bg-white/30 text-white transition flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-image"></i> Foto 3
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp 2: LAZ Bakrie Amanah -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-ivory-200 bg-white/20 px-2.5 py-1 rounded-md">2024 - 2025</span>
+                        <h3 class="font-display font-bold text-xl text-white mt-3">LAZ Bakrie Amanah</h3>
+                        <p class="text-xs text-ivory-200 font-semibold mb-3">Relawan & Beasiswa Tangguh</p>
+                        <ul class="text-xs text-ivory-100 space-y-2 list-disc list-inside mb-4">
+                            <li>Koordinator Masjid & Administrasi Ramadhan.</li>
+                            <li>Penyusunan laporan cashflow pembangunan Masjid.</li>
+                            <li>Penyaluran paket bantuan buka puasa dhuafa.</li>
+                        </ul>
+                    </div>
+                    <!-- Foto Bakrie Links menggunakan Button -->
+                    <div class="pt-3 border-t border-white/20">
+                        <span class="text-[11px] font-mono text-ivory-300 block mb-2"><i class="fa-solid fa-images mr-1"></i> Dokumentasi Foto (2 Foto):</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="openMediaModal('LAZ Bakrie - Penyaluran Paket', 'assets/dokumentasibakrieamanah.jpeg', 'Foto kegiatan penyaluran paket buka puasa kepada kaum dhuafa.')" class="px-3 py-1.5 bg-white/20 text-xs font-bold rounded-lg hover:bg-white/30 text-white transition flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-image"></i> Foto 1
+                            </button>
+                            <button onclick="openMediaModal('LAZ Bakrie - Tim Bakrie', 'assets/TimBakrieAmanah.jpeg', 'Pengejaan Cashflow')" class="px-3 py-1.5 bg-white/20 text-xs font-bold rounded-lg hover:bg-white/30 text-white transition flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-image"></i> Foto 2
+                            </button>
+                            <button onclick="openMediaModal('LAZ Bakrie - Tim Bakrie', 'assets/TimBakrieAmanah2.jpeg', 'Dokumentasi bersama tim relawan LAZ Bakrie Amanah.')" class="px-3 py-1.5 bg-white/20 text-xs font-bold rounded-lg hover:bg-white/30 text-white transition flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-image"></i> Foto 2
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp 3: Kumon -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-ivory-200 bg-white/20 px-2.5 py-1 rounded-md">2026</span>
+                        <h3 class="font-display font-bold text-xl text-white mt-3">Kumon Indonesia</h3>
+                        <p class="text-xs text-ivory-200 font-semibold mb-3">Asisten Pengajar Matematika</p>
+                        <ul class="text-xs text-ivory-100 space-y-2 list-disc list-inside mb-4">
+                            <li>Bimbingan matematika siswa SD, SMP, hingga SMA.</li>
+                            <li>Penjelasan konsep materi terstruktur sesuai level siswa.</li>
+                            <li>Penilaian & perencanaan program tugas berkala.</li>
+                        </ul>
+                    </div>
+                    <!-- Foto Kumon Links menggunakan Button -->
+                    <div class="pt-3 border-t border-white/20">
+                        <span class="text-[11px] font-mono text-ivory-300 block mb-2"><i class="fa-solid fa-images mr-1"></i></span>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: SKILLS & CERTIFICATES -->
+    <section id="skills" class="pt-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="slide-card p-8 md:p-12 relative overflow-hidden">
+            <div class="text-center mb-10">
+                <span class="text-xs font-mono font-bold text-mahogany-600 tracking-widest uppercase">Competencies & Verification</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-black text-mahogany-900 tracking-tight">
+                    Technical Skills & <span class="text-mahogany-600">Certificates</span>
+                </h2>
+            </div>
+
+            <!-- Skills Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                
+                <!-- Skill Card 1 -->
+                <div class="rounded-2xl border border-ivory-300 overflow-hidden bg-ivory-50 hover:shadow-lg transition">
+                    <div class="bg-mahogany-600 text-white p-4 font-display font-bold text-base flex items-center justify-between">
+                        <span>Pemodelan Math</span>
+                        <i class="fa-solid fa-calculator text-ivory-200"></i>
+                    </div>
+                    <div class="p-5 text-xs text-slate-600 space-y-2">
+                        <p>• Black-Scholes Model</p>
+                        <p>• Persamaan Diferensial</p>
+                        <p>• Linear Programming</p>
+                        <p>• Methode Simpleks & FIFO</p>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="rounded-2xl border border-ivory-300 overflow-hidden bg-ivory-50 hover:shadow-lg transition">
+                    <div class="bg-mahogany-600 text-white p-4 font-display font-bold text-base flex items-center justify-between">
+                        <span>Statistika & Data</span>
+                        <i class="fa-solid fa-chart-pie text-ivory-200"></i>
+                    </div>
+                    <div class="p-5 text-xs text-slate-600 space-y-2">
+                        <p>• Time Series Forecasting</p>
+                        <p>• Regresi Linear & ANOVA</p>
+                        <p>• Probabilitas & Stokastik</p>
+                        <p>• Pengujian Hipotesis Data</p>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="rounded-2xl border border-ivory-300 overflow-hidden bg-ivory-50 hover:shadow-lg transition">
+                    <div class="bg-mahogany-600 text-white p-4 font-display font-bold text-base flex items-center justify-between">
+                        <span>Tools & Software</span>
+                        <i class="fa-solid fa-laptop-code text-ivory-200"></i>
+                    </div>
+                    <div class="p-5 text-xs text-slate-600 space-y-2">
+                        <p>• MATLAB & R-Studio</p>
+                        <p>• Python & C++</p>
+                        <p>• SPSS & Google Colab</p>
+                        <p>• Microsoft Project & Excel</p>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="rounded-2xl border border-ivory-300 overflow-hidden bg-ivory-50 hover:shadow-lg transition">
+                    <div class="bg-mahogany-600 text-white p-4 font-display font-bold text-base flex items-center justify-between">
+                        <span>Soft Skills</span>
+                        <i class="fa-solid fa-brain text-ivory-200"></i>
+                    </div>
+                    <div class="p-5 text-xs text-slate-600 space-y-2">
+                        <p>• Critical Problem Solving</p>
+                        <p>• Ketelitian Laporan & Cashflow</p>
+                        <p>• Public Speaking / MC</p>
+                        <p>• Kerjasama Tim Organisasi</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CERTIFICATES ATTACHMENT SECTION -->
+            <div class="bg-ivory-100 p-6 rounded-2xl border border-ivory-300">
+                <h3 class="font-display font-bold text-mahogany-900 text-lg mb-4 flex items-center">
+                    <i class="fa-solid fa-certificate text-mahogany-600 mr-2 text-xl"></i> Sertifikat Pendukung
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    
+                    <!-- Certificate 1: Python / Sertifikat -->
+                    <div class="bg-white p-4 rounded-xl border border-ivory-300 flex items-center justify-between hover:border-mahogany-600 transition">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-mahogany-100 text-mahogany-600 flex items-center justify-center font-bold">
+                                <i class="fa-brands fa-python text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-mahogany-900">Sertifikat Resmi</h4>
+                                <p class="text-[11px] text-slate-500">Sertifikat Talitha Nuril Azmi</p>
+                            </div>
+                        </div>
+                        <button onclick="openPdfModal('Sertifikat Python & Pemrograman Data', 'assets/sertifikatpelatihanphyton.pdf', 'Sertifikat keahlian resmi pemrosesan data dan pemrograman Python.')" class="px-3 py-1.5 bg-mahogany-600 text-white text-xs font-bold rounded-lg hover:bg-mahogany-800 transition shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-file-pdf"></i> Buka PDF
+                        </button>
+                    </div>
+
+                    <!-- Certificate 2: Keorganisasian -->
+                    <div class="bg-white p-4 rounded-xl border border-ivory-300 flex items-center justify-between hover:border-mahogany-600 transition">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-mahogany-100 text-mahogany-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-users text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-mahogany-900">Sertifikat Keorganisasian</h4>
+                                <p class="text-[11px] text-slate-500">HIMATIKA & Kepanitiaan ITERA</p>
+                            </div>
+                        </div>
+                        <button onclick="openPdfModal('Sertifikat Keorganisasian & Kepemimpinan', 'assets/sertifikathimatika.pdf', 'Sertifikat keaktifan dan kepemimpinan dalam organisasi serta kepanitiaan kampus ITERA.')" class="px-3 py-1.5 bg-mahogany-600 text-white text-xs font-bold rounded-lg hover:bg-mahogany-800 transition shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-file-pdf"></i> Buka PDF
+                        </button>
+                    </div>
+
+                    <!-- Certificate 3: TOEFL -->
+                    <div class="bg-white p-4 rounded-xl border border-ivory-300 flex items-center justify-between hover:border-mahogany-600 transition">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-mahogany-100 text-mahogany-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-language text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-mahogany-900">Sertifikat TOEFL</h4>
+                                <p class="text-[11px] text-slate-500">English Proficiency Assessment</p>
+                            </div>
+                        </div>
+                        <button onclick="openPdfModal('Sertifikat TOEFL English Proficiency', 'assets/TOEFL.pdf', 'Sertifikat kecakapan Bahasa Inggris resmi dengan standar penilaian TOEFL.')" class="px-3 py-1.5 bg-mahogany-600 text-white text-xs font-bold rounded-lg hover:bg-mahogany-800 transition shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-file-pdf"></i> Buka PDF
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 6: PROJECTS & GALLERY -->
+    <section id="projects" class="pt-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="slide-card p-8 md:p-12 relative overflow-hidden">
+            <div class="text-center mb-10">
+                <span class="text-xs font-mono font-bold text-mahogany-600 tracking-widest uppercase">Documentation & Portfolio</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-black text-mahogany-900">
+                    Projects & <span class="text-mahogany-600">Gallery</span>
+                </h2>
+            </div>
+
+            <!-- Grid 4 Kartu Sesuai Screenshot -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1: Final Project / Tugas Akhir (Bisa Diklik & Membuka PDF di Modal) -->
+                <div class="rounded-2xl border border-ivory-300 overflow-hidden bg-ivory-50 shadow-sm hover:shadow-xl hover:border-mahogany-600 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-44 bg-mahogany-700 text-white p-6 flex flex-col justify-between relative group-hover:bg-mahogany-800 transition">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-mono font-bold bg-white/20 px-2 py-0.5 rounded text-ivory-100">Tugas Akhir</span>
+                                <i class="fa-solid fa-file-pdf text-amber-300 text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-center text-ivory-100">Final Project / Tugas Akhir</h3>
+                            <!-- Tombol Interaktif di dalam Card untuk Membuka PDF Penelitian -->
+                            <button onclick="openPdfModal('Dokumen Tugas Akhir / Penelitian', 'assets/SEMHAS.pdf', 'Dokumen lengkap penelitian dan Tugas Akhir Sarjana Matematika ITERA.')" class="w-full py-1.5 bg-white/20 hover:bg-white/30 text-white text-xs font-bold rounded-lg transition duration-200 flex items-center justify-center gap-1 shadow-sm">
+                                <i class="fa-solid fa-file-pdf"></i> Buka PDF Penelitian
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-display font-bold text-base text-mahogany-900 mb-1 group-hover:text-mahogany-600 transition">Simulasi Numerik Gelombang Run-up pada kasus Tsunami Selat Sunda 2018</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">Studi Pemodelan Matematika Simulasi Numerik pergerakan gelombang menggunakan Colab Google, Surfer, Gebco.net. Dalam Tugas Akhir Sarjana Matematika ITERA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: WIKA Beton -->
+                <div class="rounded-2xl border border-ivory-300 overflow-hidden bg-ivory-50 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-mahogany-700 text-white p-6 flex flex-col justify-between relative group-hover:bg-mahogany-800 transition">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-mono font-bold bg-white/20 px-2 py-0.5 rounded text-ivory-100">Presentation</span>
+                                <i class="fa-solid fa-file-pdf text-amber-300 text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-center text-ivory-100">Project Magang</h3>
+                            <!-- Tombol Interaktif di dalam Card untuk Membuka PDF Penelitian -->
+                            <button onclick="openPdfModal('Dokumen Tugas Akhir / Penelitian', 'assets/Kerjapraktik.pdf', 'Dokumen lengkap penelitian dan Tugas Akhir Sarjana Matematika ITERA.')" class="w-full py-1.5 bg-white/20 hover:bg-white/30 text-white text-xs font-bold rounded-lg transition duration-200 flex items-center justify-center gap-1 shadow-sm">
+                                <i class="fa-solid fa-file-pdf"></i> Buka PDF Penelitian
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-display font-bold text-base text-mahogany-900 mb-1">Magang PT WIKA Beton Tbk</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">Studi Time Motion produk baru & administrasi seksi produksi. Penelitian ini mempelajari tentang penerapan Time Motion Study dengan pengaplikasian Linear Regresion. Adapun Tools yang digunakan Microsoft Project, Microsoft Excel, R-Studi & phyton.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Black-Scholes -->
+                <div class="rounded-2xl border border-ivory-300 overflow-hidden bg-ivory-50 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-mahogany-700 text-white p-6 flex flex-col justify-between relative group-hover:bg-mahogany-800 transition">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-mono font-bold bg-white/20 px-2 py-0.5 rounded text-ivory-100">Poster</span>
+                                <i class="fa-solid fa-file-pdf text-amber-300 text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-center text-ivory-100">Project Exam</h3>
+                            <!-- Tombol Interaktif di dalam Card untuk Membuka PDF Penelitian -->
+                            <button onclick="openPdfModal('Dokumen Tugas Akhir / Penelitian', 'assets/ADW.pdf', 'Dokumen lengkap penelitian dan Tugas Akhir Sarjana Matematika ITERA.')" class="w-full py-1.5 bg-white/20 hover:bg-white/30 text-white text-xs font-bold rounded-lg transition duration-200 flex items-center justify-center gap-1 shadow-sm">
+                                <i class="fa-solid fa-file-pdf"></i> Buka PDF Penelitian
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-display font-bold text-base text-mahogany-900 mb-1">Implikasi Model Time Series Pada IHPR Bandar Lampung</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">Proyek riset Mata Kuliah pemodelan stokastik & analisis deret waktu menggunakan metode ARIMA untuk menganalisis dan memprediksi dinamika Indeks Harga Properti Residensial (IHPR) Bank Indonesia per-triwulan di Bandar Lampung (periode 2010–2024), mencakup analisis komparatif sebelum dan setelah dampak pandemi COVID-19.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card 4: Kepanitiaan -->
+                <div class="rounded-2xl border border-ivory-300 overflow-hidden bg-ivory-50 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-mahogany-700 text-white p-6 flex flex-col justify-between relative group-hover:bg-mahogany-800 transition">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-mono font-bold bg-white/20 px-2 py-0.5 rounded text-ivory-100">Poster</span>
+                                <i class="fa-solid fa-file-pdf text-amber-300 text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-center text-ivory-100">Project Exam</h3>
+                            <!-- Tombol Interaktif di dalam Card untuk Membuka PDF Penelitian -->
+                            <button onclick="openPdfModal('Dokumen Tugas Akhir / Penelitian', 'assets/statnopa.pdf', 'Dokumen lengkap penelitian dan Tugas Akhir Sarjana Matematika ITERA.')" class="w-full py-1.5 bg-white/20 hover:bg-white/30 text-white text-xs font-bold rounded-lg transition duration-200 flex items-center justify-center gap-1 shadow-sm">
+                                <i class="fa-solid fa-file-pdf"></i> Buka PDF Penelitian
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-display font-bold text-base text-mahogany-900 mb-1">Analisis Komparatif Return Saham Perbankan BUMN (BBM, BBRI, BMRI, BBTN) Periode 2024-2025: Pendekatan Statistik Non-Parametrik Kruskal-Wallis</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed"> Penelitian ini merupakan Final project mata Kuliah Statistika Non-Parametrik, dengan Goals menganalisis perbedaan return saham bulanan empat bank BUMN (BBM, BBRI, BMRI, dan BBTN) pada periode 1 Desember 2024 30November 2025 menggunakan pendekatan statistik non-parametrik Kruskal—Wallis. Tools yang digunakan adalah Microsoft Excel & R_Studio</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SUB-SECTION BARU: DOKUMENTASI KEGIATAN & KEORGANISASIAN (6-7 FOTO) -->
+            <div class="mt-12 pt-8 border-t border-ivory-300">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <span class="text-[11px] font-mono font-bold text-mahogany-600 uppercase tracking-widest block">Campus Life & Leadership</span>
+                        <h3 class="font-display font-bold text-xl sm:text-2xl text-mahogany-900">Dokumentasi Kegiatan & Keorganisasian</h3>
+                    </div>
+                    <span class="text-xs font-mono bg-mahogany-100 text-mahogany-700 font-semibold px-3 py-1 rounded-full hidden sm:inline-block">7 Galeri Foto</span>
+                </div>
+
+                <!-- Grid 7 Foto Dokumentasi -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    
+                    <!-- Foto 1 -->
+                    <div onclick="openMediaModal('Panitia MAFEST ITERA', 'assets/1.jpeg', 'Foto kepanitiaan Dies Natalis HIMATIKA ITERA.')" 
+                         class="group relative h-40 rounded-xl overflow-hidden cursor-pointer border border-ivory-300 shadow-sm hover:shadow-md transition">
+                        <img src="assets/1.jpeg" alt="Dokumentasi 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mahogany-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-3">
+                            <span class="text-xs font-bold text-white"><i class="fa-solid fa-expand mr-1"></i> HIMATIKA ITERA</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 2 -->
+                    <div onclick="openMediaModal('KKN Itera', 'assets/3.jpeg', 'Digitasi Mitigasi Bencana wilayah Dusun Sinar Laut, Sebalang, Lampung Selatan')" 
+                         class="group relative h-40 rounded-xl overflow-hidden cursor-pointer border border-ivory-300 shadow-sm hover:shadow-md transition">
+                        <img src="assets/3.jpeg" alt="Dokumentasi 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mahogany-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-3">
+                            <span class="text-xs font-bold text-white"><i class="fa-solid fa-expand mr-1"></i>Kuliah Kerja Nyata</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 3 -->
+                    <div onclick="openMediaModal('Wijaya Karya Beton - Tbk', 'assets/4.jpeg', 'Dokumentasi briefing pagi Seksi Produksi WIKA Beton')" 
+                         class="group relative h-40 rounded-xl overflow-hidden cursor-pointer border border-ivory-300 shadow-sm hover:shadow-md transition">
+                        <img src="assets/4.jpeg" alt="Dokumentasi 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mahogany-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-3">
+                            <span class="text-xs font-bold text-white"><i class="fa-solid fa-expand mr-1"></i>Briefing pada saat Magang WIKA Beton</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 4 -->
+                    <div onclick="openMediaModal('Studi Lapangan & Diskusi Akademis', 'assets/2.jpeg', 'Kunjungan BMKG Maritim Lampung dalam Matakuliah Kapita Seleta Matematika Komputasi')" 
+                         class="group relative h-40 rounded-xl overflow-hidden cursor-pointer border border-ivory-300 shadow-sm hover:shadow-md transition">
+                        <img src="assets/2.jpeg" alt="Dokumentasi 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mahogany-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-3">
+                            <span class="text-xs font-bold text-white"><i class="fa-solid fa-expand mr-1"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 5 -->
+                    <div onclick="openMediaModal('Mathematics Festival', 'assets/5.jpeg', 'Sebagai Divisi Acara Mathematics Festival')" 
+                         class="group relative h-40 rounded-xl overflow-hidden cursor-pointer border border-ivory-300 shadow-sm hover:shadow-md transition">
+                        <img src="assets/5.jpeg" alt="Dokumentasi 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mahogany-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-3">
+                            <span class="text-xs font-bold text-white"><i class="fa-solid fa-expand mr-1"></i>Acara Mathematics Festival</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 6 -->
+                    <div onclick="openMediaModal('Happiness Project HIMATIKA', 'assets/6.jpeg', 'MC program kerja Happiness Project - Divisi Acara')" 
+                         class="group relative h-40 rounded-xl overflow-hidden cursor-pointer border border-ivory-300 shadow-sm hover:shadow-md transition">
+                        <img src="assets/6.jpeg" alt="Dokumentasi 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mahogany-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-3">
+                            <span class="text-xs font-bold text-white"><i class="fa-solid fa-expand mr-1"></i> Progja Kreatif</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 7 -->
+                    <div onclick="openMediaModal('HIMATIKA', 'assets/7.jpeg', 'Badam Pengurus Harian HIMATIkA.')" 
+                         class="group relative h-40 sm:col-span-2 lg:col-span-2 rounded-xl overflow-hidden cursor-pointer border border-ivory-300 shadow-sm hover:shadow-md transition">
+                        <img src="assets/7.jpeg" alt="Dokumentasi 7" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mahogany-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-3">
+                            <span class="text-xs font-bold text-white"><i class="fa-solid fa-expand mr-1"></i>Kegiatan HIMATIKA</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 7: CONTACT -->
+    <section id="contact" class="pt-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-mahogany-900 text-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
+            <div class="dot-pattern-light absolute top-6 right-8 w-32 h-32 pointer-events-none"></div>
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-10">
+                <span class="text-xs font-mono font-bold text-ivory-300 tracking-widest uppercase">--</span>
+                <h2 class="text-4xl sm:text-6xl font-display font-black tracking-tight uppercase">
+                    Connect <span class="text-ivory-300">With Me</span>
+                </h2>
+                <p class="text-sm sm:text-base text-ivory-200">
+                    Terbuka untuk peluang karir di bidang Analisis Data, Manajemen Industri, dan Riset Matematika. Silakan hubungi saya melalui saluran resmi di bawah ini.
+                </p>
+            </div>
+
+            <!-- Grid Link Sosial Media Langsung (Tanpa Formulir) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto relative z-10">
+                
+                <!-- Email -->
+                <a href="mailto:talithanuril.05@gmail.com" class="p-5 rounded-2xl bg-white/10 border border-white/15 hover:bg-ivory-50 hover:text-mahogany-900 transition duration-300 group flex flex-col justify-between min-h-[140px]">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 group-hover:bg-mahogany-600 group-hover:text-white text-ivory-200 flex items-center justify-center text-xl transition">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60 group-hover:opacity-100"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-mono uppercase tracking-wider text-ivory-300 group-hover:text-mahogany-600 font-bold block">Email Resmi</span>
+                        <h4 class="font-bold text-sm truncate mt-0.5">talithanuril.05@gmail.com</h4>
+                    </div>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/6281271884686" target="_blank" class="p-5 rounded-2xl bg-white/10 border border-white/15 hover:bg-ivory-50 hover:text-mahogany-900 transition duration-300 group flex flex-col justify-between min-h-[140px]">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 group-hover:bg-emerald-600 group-hover:text-white text-emerald-400 flex items-center justify-center text-2xl transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60 group-hover:opacity-100"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-mono uppercase tracking-wider text-ivory-300 group-hover:text-mahogany-600 font-bold block">WhatsApp</span>
+                        <h4 class="font-bold text-sm mt-0.5">+62 812-7188-4686</h4>
+                    </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/talitha-nuril-azmi" target="_blank" class="p-5 rounded-2xl bg-white/10 border border-white/15 hover:bg-ivory-50 hover:text-mahogany-900 transition duration-300 group flex flex-col justify-between min-h-[140px]">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 group-hover:bg-blue-600 group-hover:text-white text-sky-400 flex items-center justify-center text-xl transition">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60 group-hover:opacity-100"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-mono uppercase tracking-wider text-ivory-300 group-hover:text-mahogany-600 font-bold block">LinkedIn</span>
+                        <h4 class="font-bold text-sm truncate mt-0.5">talitha-nuril-azmi</h4>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/talithanrz?rpxt=ZDZxM3FrNTY5a2Rk" target="_blank" class="p-5 rounded-2xl bg-white/10 border border-white/15 hover:bg-ivory-50 hover:text-mahogany-900 transition duration-300 group flex flex-col justify-between min-h-[140px]">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 group-hover:bg-pink-600 group-hover:text-white text-pink-400 flex items-center justify-center text-xl transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-60 group-hover:opacity-100"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-mono uppercase tracking-wider text-ivory-300 group-hover:text-mahogany-600 font-bold block">Instagram</span>
+                        <h4 class="font-bold text-sm mt-0.5">@talithanuril</h4>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Location Note Footer -->
+            <div class="mt-10 pt-6 border-t border-white/10 text-center text-xs text-ivory-300">
+                <p><i class="fa-solid fa-location-dot mr-1 text-amber-300"></i> Airan 1 Way Huwi, Jati Agung, Kab. Lampung Selatan, Indonesia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL POPUP -->
+    <div id="mediaModal" class="fixed inset-0 z-50 hidden bg-mahogany-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-ivory-50 rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl border border-ivory-300">
+            <div class="p-4 bg-ivory-200 border-b border-ivory-300 flex justify-between items-center">
+                <h4 id="modalTitle" class="font-display font-bold text-mahogany-900">Detail</h4>
+                <div class="flex items-center gap-2">
+                    <a id="modalDownloadBtn" href="#" target="_blank" class="hidden px-3 py-1 bg-mahogany-600 text-white text-xs font-bold rounded-lg hover:bg-mahogany-800 transition items-center gap-1">
+                        <i class="fa-solid fa-external-link"></i> Tab Baru
+                    </a>
+                    <button onclick="closeMediaModal()" class="w-8 h-8 rounded-full bg-ivory-300 text-slate-700 flex items-center justify-center hover:bg-mahogany-600 hover:text-white transition">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6 space-y-4">
+                <!-- Container Dinamis untuk Gambar atau PDF -->
+                <div id="modalContentContainer" class="w-full h-96 bg-slate-900 rounded-xl overflow-hidden border border-ivory-300">
+                    <img id="modalImage" src="" class="w-full h-full object-cover">
+                </div>
+                <p id="modalDesc" class="text-sm text-slate-700 leading-relaxed"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function openMediaModal(title, imageSrc, description) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDownloadBtn').classList.add('hidden');
+            
+            const container = document.getElementById('modalContentContainer');
+            container.innerHTML = `<img id="modalImage" src="${imageSrc}" class="w-full h-full object-cover">`;
+            
+            document.getElementById('modalDesc').innerText = description;
+            document.getElementById('mediaModal').classList.remove('hidden');
+        }
+
+        function openPdfModal(title, pdfSrc, description) {
+            document.getElementById('modalTitle').innerText = title;
+            
+            const downloadBtn = document.getElementById('modalDownloadBtn');
+            downloadBtn.href = pdfSrc;
+            downloadBtn.classList.remove('hidden');
+
+            const container = document.getElementById('modalContentContainer');
+            container.innerHTML = `<iframe src="${pdfSrc}" class="w-full h-full" type="application/pdf"></iframe>`;
+            
+            document.getElementById('modalDesc').innerText = description;
+            document.getElementById('mediaModal').classList.remove('hidden');
+        }
+
+        function closeMediaModal() {
+            document.getElementById('mediaModal').classList.add('hidden');
+            document.getElementById('modalContentContainer').innerHTML = '';
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert('Pesan Anda berhasil dikirim! Terima kasih.');
+            e.target.reset();
+        }
+
+        function downloadCV() {
+            window.open('assets/CV.pdf', '_blank');
+        }
+    </script>
+</body>
+</html>
